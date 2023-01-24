@@ -103,7 +103,7 @@ c('.modal-add').addEventListener('click', () => {
 // ATUALIZA O CARRINHO
 function updateCart() {
     if(cart.length > 0) {
-        c('aside').style.display = 'flex'
+        c('aside').style.width = '2600px'
         c('.cart').innerHTML = ''
 
         let subtotal = 0
@@ -170,7 +170,7 @@ function updateCart() {
        c('.cart-total .cart-money').innerHTML = `R$ ${total.toFixed(2)}`
 
     } else {
-        c('aside').style.display = 'none'
+        c('aside').style.width = '0px'
     }
 }
 

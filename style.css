@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
 .modal {
     position: fixed;
     top: 0;
@@ -218,18 +226,30 @@
 }
 
 .shop-cart {
-    display: none;
+    display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 80px;
-    right: 0;
-    width: 35%;
-    height: calc(100vh - 80px);
+    width: 0px;
     background-color: rgba(20, 20, 20, 0.990);
     color: #F6F6F6;
     font-weight: 700;
     transition: all ease 0.7s;
-    overflow-y: auto;
+    padding-top: 80px;
+}
+
+.shop-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.closer {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    padding-top: 10px;
+    padding-right: 10px;
+    cursor: pointer;
 }
 
 .cart-title {
@@ -294,6 +314,11 @@
     font-size: 13px;
 }
 
+.cart-details-total {
+    display: flex;
+    flex-direction: column;
+}
+
 .cart-subtotal, .cart-desc-total {
     display: flex;
     justify-content: space-between;
@@ -301,6 +326,8 @@
     font-size: 16px;
     flex: 1.5;
     margin: 10px;
+    border-top: 1px solid rgba(204, 204, 204, 0.400);
+    padding-top: 20px;
 }
 
 .cart-total {
@@ -310,6 +337,9 @@
     font-size: 22px;
     flex: 1.5;
     margin: 10px;
+    border-top: 1px solid rgba(204, 204, 204, 0.400);
+    border-bottom: 1px solid rgba(204, 204, 204, 0.400);
+    padding: 15px 0px;
 }
 
 .cart-button {
@@ -387,14 +417,14 @@ nav a:hover {
 }
 
 main {
-    max-width: 1190px;
+    
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 120px;
     margin: auto;
-    padding: 80px 0px;
+    padding: 80px 40px;
     background-color: #F6F6F6;
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
@@ -541,6 +571,12 @@ hr {
 
 @media screen and (max-width: 1000px) {
 
+    .shop-cart {
+        position: absolute;
+        width: 100vw;
+        height: auto;
+        padding-top: 10px;
+    }
 
     .modal-area {
         width: 400px;
