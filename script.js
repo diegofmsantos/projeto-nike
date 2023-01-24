@@ -103,7 +103,7 @@ c('.modal-add').addEventListener('click', () => {
 // ATUALIZA O CARRINHO
 function updateCart() {
     if(cart.length > 0) {
-        c('aside').style.width = '2600px'
+        c('aside').style.width = '150vw'
         c('.cart').innerHTML = ''
 
         let subtotal = 0

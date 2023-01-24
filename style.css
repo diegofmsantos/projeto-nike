@@ -240,7 +240,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 30px;
+    gap: 10px;
 }
 
 .closer {
@@ -273,7 +273,6 @@ body {
     align-items: center;
     gap: 20px;
     flex: 0.8;
-    padding-bottom: 20px;
     margin: 0px 10px;
 }
 
@@ -417,18 +416,18 @@ nav a:hover {
 }
 
 main {
-    
+    max-width: 1100px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 120px;
-    margin: auto;
-    padding: 80px 40px;
+    gap: 50px;
+    padding: 80px 0px;
     background-color: #F6F6F6;
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
     background-color: rgba(230, 222, 222, 0.452);
+    margin: auto;
 }
 
 .snkrs {
@@ -573,9 +572,11 @@ hr {
 
     .shop-cart {
         position: absolute;
-        width: 100vw;
-        height: auto;
+        width: 100%;
+        height: 100vh;
         padding-top: 10px;
+        align-items: center;
+        padding-right: 550px;
     }
 
     .modal-area {
