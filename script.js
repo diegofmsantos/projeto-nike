@@ -1,13 +1,3 @@
-// MENU HAMBURGUER
-let menuNavBar = document.querySelector('#navbar')
-let menu = document.querySelector('#menu').addEventListener('click', () => {
-    if(menuNavBar.style.display == 'flex') {
-        menuNavBar.style.display = 'none'
-    } else {
-        menuNavBar.style.display = 'flex'
-    }
-})
-
 let cart = []
 let modalQt = 1
 modalKey = 0
@@ -100,10 +90,24 @@ c('.modal-add').addEventListener('click', () => {
     closeModal()
 })
 
+c('#shopping-cart').addEventListener('click', () => {
+    if(cart.length > 0) {
+        c('.shop-cart').style.display = 'flex'
+    } else {
+        c('.shop-cart').style.display = 'none'
+    }
+})
+
+c('.closer').addEventListener('click', () => {
+    c('.shop-cart').style.display = 'none'
+})
+
 // ATUALIZA O CARRINHO
 function updateCart() {
+    c('#shopping-cart span').innerHTML = cart.length
+
     if(cart.length > 0) {
-        c('aside').style.width = '150vw'
+        c('.shop-cart').style.width = '150vw'
         c('.cart').innerHTML = ''
 
         let subtotal = 0
@@ -170,8 +174,7 @@ function updateCart() {
        c('.cart-total .cart-money').innerHTML = `R$ ${total.toFixed(2)}`
 
     } else {
-        c('aside').style.width = '0px'
+        c('.shop-cart').style.width = '0px'
+        c('.shop-cart').style.display = 'none'
     }
 }
-
-

@@ -226,7 +226,7 @@ body {
 }
 
 .shop-cart {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 0px;
     background-color: rgba(20, 20, 20, 0.990);
@@ -385,11 +385,20 @@ header {
     height: 80px;
 }
 
-#menu {
-    width: 36px;
-    height: 36px;
+#shopping-cart {
+    width: 80px;
+    height: 60px;
+    font-size: 26px;
     display: none;
+    padding-bottom: 5px;
     cursor: pointer;
+    color: #FFF;
+    background-color: #666;
+    border-radius: 10px;
+}
+
+#shopping-cart span {
+    font-size: 22px;
 }
 
 nav ul {
@@ -552,38 +561,35 @@ hr {
 
     .shop-cart {
         position: absolute;
-        width: 100%;
-        height: auto;
+        width: 0%;
+        height: 100vh;
         padding-top: 20px;
+        padding-right: 550px;
         align-items: center;
-        padding-right: 500px;
     }
 
     .closer {
-    margin-left: 400px;
-    padding-top: 10px;
-    padding-right: 10px;
+        margin-left: 400px;
+        padding-top: 10px;
+        padding-right: 10px;
     }
 
-    #menu {
-        display: none;
+    #shopping-cart {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
         position: absolute;
     }
 
-    .footer-content {
-        height: auto;
+    #shopping-cart span {
+        padding-top: 8px;
     }
-    
-    .footer-end {
-        justify-content: center;
-        width: auto;
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px 0px 0px 0px;
-    }
-}
 
-@media screen and (max-width: 1000px) {
+    header {
+        position: static;
+        justify-content: space-around;
+    }
 
     .modal-area {
         width: 400px;
@@ -676,16 +682,6 @@ hr {
         font-size: 14px;
     }
 
-    header {
-        position: static;
-        justify-content: space-around;
-    }
-
-    #menu {
-        display: block;
-        position: absolute;
-    }
-
     .logo-img-air, .logo-img-nike {
         width: 70px;
         height: 70px;
@@ -727,7 +723,6 @@ hr {
         flex: 1;
     }
 
-
     nav li:hover {
         background-color: rgba(255, 255, 255, 0.781);
         border: 1px solid black;
@@ -741,6 +736,18 @@ hr {
     main {
         position: static;
         top: 0px;
+    }
+
+    .footer-content {
+        height: auto;
+    }
+    
+    .footer-end {
+        justify-content: center;
+        width: auto;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0px 0px 0px;
     }
 }
 
@@ -771,18 +778,63 @@ hr {
 @media screen and (max-width: 768px) {
 
     .shop-cart {
-        padding-right: 450px;
+        padding-right: 400px;
     }
 
     nav ul li a {
         height: 30px;
     }
 }
+
+@media screen and (max-width: 650px) {
+
+    .shop-cart {
+        padding-right: 320px;
+    }
+
+    .cart-img {
+        width: 80px;
+        height: 50px;
+    }
+
+    .cart-details {
+        gap: 25px;
+    }
+
+    .cart-subtotal, .cart-desc-total {
+        font-size: 14px;
+    }
+
+    .cart-total {
+        font-size: 20px;
+    }
+
+    .cart-button button {
+        width: 220px;
+        font-size: 18px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .shop-cart {
+        padding-right: 280px;
+    }
+
+    .shop-area {
+        max-width: 350px;
+    }
+}
     
 @media screen and (max-width: 425px) {
 
     .shop-cart {
-        padding-right: 230px;
+        padding-right: 260px;
+        display: none;
+    }
+
+    .shop-area {
+        max-width: 330px;
     }
     
     nav ul {
@@ -798,8 +850,15 @@ hr {
 @media screen and (max-width: 320px) {
 
     .shop-cart {
-        width: auto;
-        padding: 100px;
+        padding-right: 180px;
+    }
+
+    .shop-area {
+        max-width: 280px;
+    }
+
+    .closer {
+        margin-left: 270px;
     }
     
     nav ul li a {
