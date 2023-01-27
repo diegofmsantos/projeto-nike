@@ -226,7 +226,7 @@ body {
 }
 
 .shop-cart {
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 0px;
     background-color: rgba(20, 20, 20, 0.990);
