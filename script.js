@@ -100,6 +100,7 @@ c('#shopping-cart').addEventListener('click', () => {
 
 c('.closer').addEventListener('click', () => {
     c('.shop-cart').style.display = 'none'
+    updateCart()
 })
 
 // ATUALIZA O CARRINHO
