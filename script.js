@@ -95,7 +95,7 @@ c('#shopping-cart').addEventListener('click', () => {
         c('.shop-cart').style.display = 'flex'
     } else {
         c('.shop-cart').style.display = 'none'
-    }
+    }   
 })
 
 c('.closer').addEventListener('click', () => {
